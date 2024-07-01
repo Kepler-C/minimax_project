@@ -2,11 +2,14 @@
 
 ## Memory configuration
 
-###SBox  
+### SBox  
+
 [0 - 3F] or [0 - 63]
 
-###Key  
+### Key  
+
 [40] or [64]
 
-###Encrypted data  
+### Encrypted data  
+
 [41 - CFC] or [65 - 3324]
