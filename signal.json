@@ -1,0 +1,112 @@
+{
+  "signaltable": {
+    "row": [
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "0"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "ITER.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "2"
+          }
+        ],
+        "label": "PERMUT",
+        "comment": "Inittialisierung des Iterators 'i' für die Permutation-Schleife"
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "2"
+          },
+          {
+            "name": "ALU_SELECT_B",
+            "value": "4"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "ACCU.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "4"
+          }
+        ],
+        "unconditional-jump": {
+          "target": "8"
+        }
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ],
+        "label": "PRGA"
+      }
+    ]
+  }
+}

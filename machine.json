@@ -1,0 +1,88 @@
+{
+  "machine": {
+    "muxInputs": [
+      {
+        "input": [
+          {
+            "type": "constant",
+            "value": "0"
+          },
+          {
+            "type": "constant",
+            "value": "1"
+          },
+          {
+            "type": "constant",
+            "value": "255"
+          },
+          {
+            "type": "constant",
+            "value": "65280"
+          },
+          {
+            "type": "constant",
+            "value": "16711680"
+          },
+          {
+            "type": "constant",
+            "value": "-16777216"
+          }
+        ],
+        "muxType": "A"
+      },
+      {
+        "input": [
+          {
+            "type": "register",
+            "value": "PC"
+          },
+          {
+            "type": "register",
+            "value": "IR"
+          },
+          {
+            "type": "register",
+            "value": "MDR"
+          },
+          {
+            "type": "register",
+            "value": "ACCU"
+          },
+          {
+            "type": "register",
+            "value": "ITER"
+          }
+        ],
+        "muxType": "B"
+      }
+    ],
+    "registers": {
+      "register": [
+        {
+          "size": "BITS_32",
+          "name": "ITER",
+          "description": "Index i in permutation loop"
+        },
+        {
+          "size": "BITS_32",
+          "name": "CALC_ADR",
+          "description": "Result of the division of ITER by 4"
+        },
+        {
+          "size": "BITS_32",
+          "name": "CALC_BYTE",
+          "description": "Result of ITER modulo 4"
+        }
+      ]
+    },
+    "alu": {
+      "operation": [
+        "A_ADD_B",
+        "B_SUB_A",
+        "TRANS_A",
+        "TRANS_B",
+        "A_SUB_B"
+      ]
+    }
+  }
+}
