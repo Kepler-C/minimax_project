@@ -94,7 +94,8 @@
         "TRANS_A",
         "TRANS_B",
         "A_SUB_B",
-        "A_DIV_B"
+        "A_DIV_B",
+        "A_MOD_B"
       ]
     }
   }

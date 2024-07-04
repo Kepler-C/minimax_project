@@ -72,6 +72,30 @@
         "signal": [
           {
             "name": "ALU_SELECT_A",
+            "value": "6"
+          },
+          {
+            "name": "ALU_SELECT_B",
+            "value": "6"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "CALC_BYTE.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "6"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
             "value": "2"
           },
           {
@@ -92,9 +116,17 @@
           }
         ],
         "conditional-jump": {
-          "cond0-target": "4",
-          "cond1-target": "11"
+          "cond0-target": "5",
+          "cond1-target": "13"
         }
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ]
       },
       {
         "signal": [
