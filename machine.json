@@ -59,6 +59,10 @@
           {
             "type": "register",
             "value": "CALC_ADR"
+          },
+          {
+            "type": "constant",
+            "value": "4"
           }
         ],
         "muxType": "B"
@@ -89,7 +93,8 @@
         "B_SUB_A",
         "TRANS_A",
         "TRANS_B",
-        "A_SUB_B"
+        "A_SUB_B",
+        "A_DIV_B"
       ]
     }
   }

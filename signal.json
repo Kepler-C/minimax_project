@@ -34,7 +34,7 @@
             "value": "0"
           },
           {
-            "name": "CALC_ADR.W",
+            "name": "ACCU.W",
             "value": "1"
           },
           {
@@ -51,7 +51,7 @@
           },
           {
             "name": "ALU_SELECT_B",
-            "value": "5"
+            "value": "6"
           },
           {
             "name": "MEM_CS",
@@ -63,7 +63,7 @@
           },
           {
             "name": "ALU_CTRL",
-            "value": "0"
+            "value": "5"
           }
         ],
         "label": "LOOP_1"
