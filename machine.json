@@ -26,6 +26,10 @@
           {
             "type": "constant",
             "value": "-16777216"
+          },
+          {
+            "type": "register",
+            "value": "ITER"
           }
         ],
         "muxType": "A"
@@ -51,6 +55,10 @@
           {
             "type": "register",
             "value": "ITER"
+          },
+          {
+            "type": "register",
+            "value": "CALC_ADR"
           }
         ],
         "muxType": "B"
