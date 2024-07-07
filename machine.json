@@ -16,20 +16,44 @@
             "value": "255"
           },
           {
-            "type": "constant",
-            "value": "65280"
+            "type": "register",
+            "value": "ITER"
           },
           {
             "type": "constant",
-            "value": "16711680"
-          },
-          {
-            "type": "constant",
-            "value": "-16777216"
+            "value": "8"
           },
           {
             "type": "register",
-            "value": "ITER"
+            "value": "MDR"
+          },
+          {
+            "type": "register",
+            "value": "ACCU"
+          },
+          {
+            "type": "constant",
+            "value": "64"
+          },
+          {
+            "type": "register",
+            "value": "CALC_BYTE"
+          },
+          {
+            "type": "register",
+            "value": "KEY_VAL"
+          },
+          {
+            "type": "register",
+            "value": "TEMP"
+          },
+          {
+            "type": "constant",
+            "value": "-256"
+          },
+          {
+            "type": "register",
+            "value": "ADR_I"
           }
         ],
         "muxType": "A"
@@ -61,8 +85,52 @@
             "value": "CALC_ADR"
           },
           {
+            "type": "register",
+            "value": "CALC_BYTE"
+          },
+          {
             "type": "constant",
             "value": "4"
+          },
+          {
+            "type": "register",
+            "value": "KEY_VAL"
+          },
+          {
+            "type": "constant",
+            "value": "256"
+          },
+          {
+            "type": "register",
+            "value": "RDM_ADR"
+          },
+          {
+            "type": "register",
+            "value": "RDM_BYTE"
+          },
+          {
+            "type": "register",
+            "value": "SHIFT"
+          },
+          {
+            "type": "register",
+            "value": "SHIFT2"
+          },
+          {
+            "type": "register",
+            "value": "ERASED"
+          },
+          {
+            "type": "register",
+            "value": "TEMP"
+          },
+          {
+            "type": "register",
+            "value": "BYTE_I"
+          },
+          {
+            "type": "register",
+            "value": "ERASED2"
           }
         ],
         "muxType": "B"
@@ -84,18 +152,74 @@
           "size": "BITS_32",
           "name": "CALC_BYTE",
           "description": "Result of ITER modulo 4"
+        },
+        {
+          "size": "BITS_32",
+          "name": "KEY_VAL",
+          "description": "key[i mod key.length]"
+        },
+        {
+          "size": "BITS_32",
+          "name": "TEMP",
+          "description": "vorläufiger Wert"
+        },
+        {
+          "size": "BITS_32",
+          "name": "RDM_ADR",
+          "description": "Random adress created from j"
+        },
+        {
+          "size": "BITS_32",
+          "name": "RDM_BYTE",
+          "description": "Random byte created from j"
+        },
+        {
+          "size": "BITS_32",
+          "name": "SHIFT",
+          "description": "number of places to shift, either left or right"
+        },
+        {
+          "size": "BITS_32",
+          "name": "SHIFT2",
+          "description": "Saves the number of places the shift muss execute."
+        },
+        {
+          "size": "BITS_32",
+          "name": "ERASED",
+          "description": "Word with an erased byte"
+        },
+        {
+          "size": "BITS_32",
+          "name": "ADR_I",
+          "description": "Address  von S[i]"
+        },
+        {
+          "size": "BITS_32",
+          "name": "BYTE_I",
+          "description": "Byte in address von S[i] "
+        },
+        {
+          "size": "BITS_32",
+          "name": "ERASED2",
+          "description": "Word with an erased byte"
         }
       ]
     },
     "alu": {
       "operation": [
         "A_ADD_B",
+        "A_SUB_B",
         "B_SUB_A",
         "TRANS_A",
         "TRANS_B",
-        "A_SUB_B",
         "A_DIV_B",
-        "A_MOD_B"
+        "A_MOD_B",
+        "A_MUL_B",
+        "A_SL_B",
+        "A_SR_B",
+        "A_AND_B",
+        "A_OR_B",
+        "A_ROTL_B"
       ]
     }
   }
