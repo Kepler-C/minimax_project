@@ -54,6 +54,10 @@
           {
             "type": "register",
             "value": "ADR_I"
+          },
+          {
+            "type": "constant",
+            "value": "65"
           }
         ],
         "muxType": "A"

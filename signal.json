@@ -619,7 +619,7 @@
             "value": "12"
           }
         ],
-        "comment": "erzeugt Maske zum Löschen des entsprechenden Bytes bzw. ihn mit Nullen füllen."
+        "comment": "erzeugt Maske zum Löschen des entsprechenden Bytes bzw. ihn mit Nullen füllen.\nDefaultmaske: 11111111 11111111 11111111 00000000"
       },
       {
         "signal": [
@@ -901,11 +901,205 @@
       {
         "signal": [
           {
+            "name": "ALU_SELECT_A",
+            "value": "0"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "ITER.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "3"
+          }
+        ],
+        "label": "PRGA"
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "3"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "MAR.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "3"
+          }
+        ],
+        "label": "loop2"
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "1"
+          },
+          {
+            "name": "MDR.W",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "5"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "ACCU.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "13"
+          },
+          {
+            "name": "ALU_SELECT_B",
+            "value": "4"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "MAR.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "1"
+          },
+          {
+            "name": "MDR.W",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "5"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "TEMP.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "6"
+          },
+          {
+            "name": "ALU_SELECT_B",
+            "value": "15"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "ACCU.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "1"
+          }
+        ],
+        "conditional-jump": {
+          "cond0-target": "47",
+          "cond1-target": "48"
+        }
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "1"
+          },
+          {
+            "name": "ALU_SELECT_B",
+            "value": "4"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "ITER.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "0"
+          }
+        ],
+        "label": "INC",
+        "unconditional-jump": {
+          "target": "40"
+        }
+      },
+      {
+        "signal": [
+          {
             "name": "MEM_CS",
             "value": "0"
           }
         ],
-        "label": "PRGA"
+        "label": "RESULT"
+      },
+      {
+        "signal": [
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          }
+        ]
       },
       {
         "signal": [
