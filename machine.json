@@ -58,6 +58,42 @@
           {
             "type": "constant",
             "value": "65"
+          },
+          {
+            "type": "register",
+            "value": "i"
+          },
+          {
+            "type": "register",
+            "value": "j"
+          },
+          {
+            "type": "register",
+            "value": "x"
+          },
+          {
+            "type": "register",
+            "value": "i_value"
+          },
+          {
+            "type": "register",
+            "value": "j_value"
+          },
+          {
+            "type": "register",
+            "value": "sisj_add"
+          },
+          {
+            "type": "register",
+            "value": "sisj_value"
+          },
+          {
+            "type": "register",
+            "value": "x_offset"
+          },
+          {
+            "type": "register",
+            "value": "z_value"
           }
         ],
         "muxType": "A"
@@ -135,6 +171,78 @@
           {
             "type": "register",
             "value": "ERASED2"
+          },
+          {
+            "type": "register",
+            "value": "i_adr"
+          },
+          {
+            "type": "register",
+            "value": "i_byte"
+          },
+          {
+            "type": "register",
+            "value": "i_shift"
+          },
+          {
+            "type": "register",
+            "value": "i_mask"
+          },
+          {
+            "type": "register",
+            "value": "j_byte"
+          },
+          {
+            "type": "register",
+            "value": "j_adr"
+          },
+          {
+            "type": "register",
+            "value": "j_shift"
+          },
+          {
+            "type": "register",
+            "value": "i_value"
+          },
+          {
+            "type": "register",
+            "value": "K"
+          },
+          {
+            "type": "register",
+            "value": "sisj_byte"
+          },
+          {
+            "type": "register",
+            "value": "sisj_adr"
+          },
+          {
+            "type": "register",
+            "value": "sisj_shift"
+          },
+          {
+            "type": "register",
+            "value": "z_adr"
+          },
+          {
+            "type": "register",
+            "value": "z_byte"
+          },
+          {
+            "type": "register",
+            "value": "z_shift"
+          },
+          {
+            "type": "register",
+            "value": "mask2"
+          },
+          {
+            "type": "register",
+            "value": "textlength"
+          },
+          {
+            "type": "register",
+            "value": "z_byte2"
           }
         ],
         "muxType": "B"
@@ -206,6 +314,136 @@
           "size": "BITS_32",
           "name": "ERASED2",
           "description": "Word with an erased byte"
+        },
+        {
+          "size": "BITS_32",
+          "name": "i",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "j",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "i_adr",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "i_byte",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "j_byte",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "j_adr",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "i_shift",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "i_mask",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "i_value",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "j_shift",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "j_value",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "x",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "K",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "sisj_add",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "sisj_byte",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "sisj_shift",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "sisj_value",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "x_offset",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "z_adr",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "z_byte",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "z_shift",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "z_value",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "mask2",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "textlength",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "sisj_adr",
+          "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "z_byte2",
+          "description": ""
         }
       ]
     },
@@ -223,7 +461,8 @@
         "A_SR_B",
         "A_AND_B",
         "A_OR_B",
-        "A_ROTL_B"
+        "A_ROTL_B",
+        "A_INC"
       ]
     }
   }
