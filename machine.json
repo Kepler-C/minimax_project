@@ -243,6 +243,10 @@
           {
             "type": "register",
             "value": "z_byte2"
+          },
+          {
+            "type": "register",
+            "value": "x"
           }
         ],
         "muxType": "B"
