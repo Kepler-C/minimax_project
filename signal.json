@@ -850,7 +850,7 @@
     ]
   },
   {
-    "unconditional-jump": {"target": "48"},
+    "unconditional-jump": {"target": "49"},
     "label": "PRGA",
     "signal": [
       {
@@ -1275,6 +1275,10 @@
       "value": "20"
     },
     {
+      "name": "ACCU.W",
+      "value": "1"
+    },
+    {
       "name": "i_value.W",
       "value": "1"
     },
@@ -1512,6 +1516,10 @@
       },
       {
         "name": "j_temp.W",
+        "value": "1"
+      },
+      {
+        "name": "sisj_add.W",
         "value": "1"
       },
       {
@@ -1754,7 +1762,7 @@
   {"signal": [
     {
       "name": "ALU_SELECT_A",
-      "value": "18"
+      "value": "19"
     },
     {
       "name": "sisj_add.W",
@@ -1762,7 +1770,7 @@
     },
     {
       "name": "ALU_SELECT_B",
-      "value": "25"
+      "value": "3"
     },
     {
       "name": "ALU_CTRL",
@@ -2183,6 +2191,159 @@
       "value": "1"
     }
   ]},
-  {"signal": []},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "22"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "26"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "14"
+    },
+    {
+      "name": "z_value.W",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "22"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "32"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "8"
+    },
+    {
+      "name": "z_value.W",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "11"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "32"
+    },
+    {
+      "name": "MDR.W",
+      "value": "0"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "12"
+    },
+    {
+      "name": "z_byte.W",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "5"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "31"
+    },
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "10"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "22"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "2"
+    },
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "11"
+    },
+    {
+      "name": "MDR_SEL",
+      "value": "0"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "MEM_RW",
+      "value": "0"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "16"
+    },
+    {
+      "name": "x.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "13"
+    }
+  ]},
+  {
+    "conditional-jump": {
+      "cond0-target": "113",
+      "cond1-target": "50"
+    },
+    "signal": [
+      {
+        "name": "ALU_SELECT_A",
+        "value": "22"
+      },
+      {
+        "name": "ITER.W",
+        "value": "0"
+      },
+      {
+        "name": "ALU_SELECT_B",
+        "value": "36"
+      },
+      {
+        "name": "ACCU.W",
+        "value": "1"
+      },
+      {
+        "name": "ALU_CTRL",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "label": "END_PROGRAM",
+    "signal": []
+  },
   {"signal": []}
 ]}}
