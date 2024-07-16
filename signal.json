@@ -1,1122 +1,825 @@
-{
-  "signaltable": {
-    "row": [
+{"signaltable": {"row": [
+  {
+    "label": "start",
+    "signal": [
       {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "0"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "4"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ITER.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ],
-        "label": "PERMUT",
-        "comment": "Inittialisierung des Iterators 'i' für die Permutation-Schleife"
+        "name": "ACCU.W",
+        "value": "0"
       },
       {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "0"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "3"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ACCU.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "3"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "7"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "CALC_ADR.W",
-            "value": "1"
-          },
-          {
-            "name": "ADR_I.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "5"
-          }
-        ],
-        "label": "LOOP_1",
-        "comment": "Da die Schleife 256 Iterationen macht, wird ITER einen max. Wert von 255 haben, was nur 8 BIts (1 Byte) benötigt. "
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "3"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "7"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "CALC_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "KEY_VAL.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "6"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_B",
-            "value": "5"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MAR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "4"
-          }
-        ],
-        "label": "WORD"
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "4"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "6"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "CALC_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "SHIFT.W",
-            "value": "1"
-          },
-          {
-            "name": "BYTE_I.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "7"
-          }
-        ],
-        "label": "SBOX_BYTE"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "2"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "6"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "CALC_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "KEY_VAL.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "8"
-          }
-        ],
-        "label": "MASK",
-        "comment": "LInks-Verschiebung mit Vielfachen von 8 (0, 8. 16, 24) erzeugt 3 zusätzliche Masken\nDefault Maske = 255 (dezimal) bzw. \n00000000 00000000 00000000 1111111 (binär) "
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "6"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "CALC_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "10"
-          }
-        ],
-        "comment": "S[i]"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "8"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "12"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "CALC_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "9"
-          }
-        ],
-        "comment": "Byte ganz rechts setzen um die Addition richtig zu berechnen."
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "6"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "6"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ACCU.W",
-            "value": "1"
-          },
-          {
-            "name": "RDM_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "0"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "7"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MAR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ],
-        "label": "KEY_BYTE",
-        "comment": "Key liegt auf der Adresse 0x40 bzw. 64 (Basis 10)"
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "8"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "KEY_VAL.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "10"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "9"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "12"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "KEY_VAL.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "9"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "6"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "8"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ACCU.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "0"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "6"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "9"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ACCU.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "6"
-          }
-        ],
-        "comment": "j"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "6"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "7"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "RDM_ADR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "5"
-          }
-        ],
-        "label": "SWAP"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "6"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "7"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "RDM_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "6"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_B",
-            "value": "10"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MAR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "4"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "4"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "11"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "RDM_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "SHIFT2.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "7"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "2"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "11"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "RDM_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "8"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "11"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "TEMP.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "10"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "10"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "13"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "TEMP.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "9"
-          }
-        ],
-        "comment": "TEMP <-- S[j]"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "11"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "13"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ERASED.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "12"
-          }
-        ],
-        "comment": "erzeugt Maske zum Löschen des entsprechenden Bytes bzw. ihn mit Nullen füllen.\nDefaultmaske: 11111111 11111111 11111111 00000000"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "14"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ERASED.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "10"
-          }
-        ],
-        "comment": "Löscht das entsprechenden Byte vom Word, auf dem S[j] liegt."
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "8"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "13"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "CALC_BYTE.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "8"
-          }
-        ],
-        "comment": "CALC_BYTE ist S[i]"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "8"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "14"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "11"
-          }
-        ],
-        "comment": "Das Word hat schon das neue Byte S[i]"
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          }
-        ],
-        "comment": "S[j] <-S[i] "
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "12"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MAR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "11"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "16"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ERASED2.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "12"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "17"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ERASED2.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "10"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "10"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "16"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "TEMP.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "8"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "10"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "17"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "11"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "2"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "4"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "1"
-          }
-        ],
-        "label": "LOOP_CHECK",
-        "conditional-jump": {
-          "cond0-target": "38",
-          "cond1-target": "39"
-        }
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "1"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "4"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ITER.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "0"
-          }
-        ],
-        "label": "INCREMENT",
-        "unconditional-jump": {
-          "target": "2"
-        }
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "0"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ITER.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ],
-        "label": "PRGA"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "3"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MAR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ],
-        "label": "loop2"
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ACCU.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "13"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "4"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MAR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "0"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "TEMP.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "6"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "15"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ACCU.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "1"
-          }
-        ],
-        "conditional-jump": {
-          "cond0-target": "47",
-          "cond1-target": "48"
-        }
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "1"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "4"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ITER.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "0"
-          }
-        ],
-        "label": "INC",
-        "unconditional-jump": {
-          "target": "40"
-        }
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          }
-        ],
-        "label": "RESULT"
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          }
-        ]
+        "name": "ALU_CTRL",
+        "value": "0"
       }
     ]
+  },
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "0"
+    },
+    {
+      "name": "j.W",
+      "value": "1"
+    },
+    {
+      "name": "i.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "2"
+    }
+  ]},
+  {
+    "label": "STARTFOR",
+    "signal": [
+      {
+        "name": "ALU_SELECT_A",
+        "value": "4"
+      },
+      {
+        "name": "i_adr.W",
+        "value": "1"
+      },
+      {
+        "name": "ALU_SELECT_B",
+        "value": "5"
+      },
+      {
+        "name": "ALU_CTRL",
+        "value": "5"
+      }
+    ]
+  },
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "4"
+    },
+    {
+      "name": "i_byte.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "5"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "4"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_B",
+      "value": "6"
+    },
+    {
+      "name": "MAR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "3"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "IR.W",
+      "value": "0"
+    },
+    {
+      "name": "ACCU.W",
+      "value": "0"
+    },
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "MEM_RW",
+      "value": "1"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "1"
+    },
+    {
+      "name": "MDR_SEL",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "7"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "7"
+    },
+    {
+      "name": "i_shift.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "6"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "5"
+    },
+    {
+      "name": "i_mask.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "8"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "8"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "6"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "9"
+    },
+    {
+      "name": "i_value.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "12"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "8"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "8"
+    },
+    {
+      "name": "i_value.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "10"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "4"
+    },
+    {
+      "name": "tmp.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "5"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "4"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "9"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "5"
+    },
+    {
+      "name": "key_byte.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "4"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "13"
+    },
+    {
+      "name": "MAR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "2"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "0"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "MEM_RW",
+      "value": "1"
+    },
+    {
+      "name": "MDR_SEL",
+      "value": "1"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "7"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "12"
+    },
+    {
+      "name": "key_byte.W",
+      "value": "0"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "6"
+    },
+    {
+      "name": "key_shift.W",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "5"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "13"
+    },
+    {
+      "name": "key_mask.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "9"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "6"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "14"
+    },
+    {
+      "name": "key_value.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "12"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "10"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "13"
+    },
+    {
+      "name": "key_value.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "10"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "10"
+    },
+    {
+      "name": "j.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "16"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "0"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "8"
+    },
+    {
+      "name": "j.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "16"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "0"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "3"
+    },
+    {
+      "name": "j.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "15"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "4"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "3"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "5"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "5"
+    },
+    {
+      "name": "j_odr.W",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "j_byte.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_A",
+      "value": "3"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "5"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "4"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_B",
+      "value": "17"
+    },
+    {
+      "name": "MDR.W",
+      "value": "0"
+    },
+    {
+      "name": "MAR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "3"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "PC.W",
+      "value": "0"
+    },
+    {
+      "name": "MEM_RW",
+      "value": "1"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "1"
+    },
+    {
+      "name": "MDR_SEL",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "7"
+    },
+    {
+      "name": "j_shift.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "18"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "6"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "5"
+    },
+    {
+      "name": "j_mosk.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "19"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "8"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "j_volue.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_A",
+      "value": "6"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "20"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "12"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "j_volue.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_A",
+      "value": "11"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "19"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "10"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "12"
+    },
+    {
+      "name": "i_mask.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "8"
+    },
+    {
+      "name": "i_shift.W",
+      "value": "0"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "9"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "12"
+    },
+    {
+      "name": "j_mosk.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "19"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "9"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "MEM_RW",
+      "value": "1"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "1"
+    },
+    {
+      "name": "MDR_SEL",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "6"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "20"
+    },
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "12"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "8"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "19"
+    },
+    {
+      "name": "i_value.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "8"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "8"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "0"
+    },
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "0"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_B",
+      "value": "17"
+    },
+    {
+      "name": "MAR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "3"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "MEM_RW",
+      "value": "0"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_B",
+      "value": "6"
+    },
+    {
+      "name": "MAR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "3"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "MEM_RW",
+      "value": "1"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "1"
+    },
+    {
+      "name": "MDR_SEL",
+      "value": "1"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "6"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "9"
+    },
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "12"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "j_volue.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_SELECT_A",
+      "value": "11"
+    },
+    {
+      "name": "j_mosk.W",
+      "value": "0"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "8"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "8"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "ALU_SELECT_A",
+      "value": "11"
+    },
+    {
+      "name": "ALU_SELECT_B",
+      "value": "0"
+    },
+    {
+      "name": "MDR.W",
+      "value": "1"
+    },
+    {
+      "name": "ALU_CTRL",
+      "value": "0"
+    }
+  ]},
+  {"signal": [
+    {
+      "name": "MEM_RW",
+      "value": "0"
+    },
+    {
+      "name": "MEM_CS",
+      "value": "1"
+    }
+  ]},
+  {
+    "conditional-jump": {
+      "cond0-target": "44",
+      "cond1-target": "45"
+    },
+    "signal": [
+      {
+        "name": "ALU_SELECT_A",
+        "value": "5"
+      },
+      {
+        "name": "ACCU.W",
+        "value": "1"
+      },
+      {
+        "name": "ALU_SELECT_B",
+        "value": "21"
+      },
+      {
+        "name": "MAR.W",
+        "value": "0"
+      },
+      {
+        "name": "ALU_CTRL",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "unconditional-jump": {"target": "2"},
+    "label": "INCREMENT I",
+    "signal": [
+      {
+        "name": "ALU_SELECT_A",
+        "value": "1"
+      },
+      {
+        "name": "i.W",
+        "value": "1"
+      },
+      {
+        "name": "ALU_SELECT_B",
+        "value": "21"
+      },
+      {
+        "name": "ALU_CTRL",
+        "value": "0"
+      }
+    ]
+  },
+  {
+    "label": "END",
+    "signal": [],
+    "breakpoint": true
   }
-}
+]}}

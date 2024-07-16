@@ -1,230 +1,265 @@
-{
-  "machine": {
-    "muxInputs": [
-      {
-        "input": [
-          {
-            "type": "constant",
-            "value": "0"
-          },
-          {
-            "type": "constant",
-            "value": "1"
-          },
-          {
-            "type": "constant",
-            "value": "255"
-          },
-          {
-            "type": "register",
-            "value": "ITER"
-          },
-          {
-            "type": "constant",
-            "value": "8"
-          },
-          {
-            "type": "register",
-            "value": "MDR"
-          },
-          {
-            "type": "register",
-            "value": "ACCU"
-          },
-          {
-            "type": "constant",
-            "value": "64"
-          },
-          {
-            "type": "register",
-            "value": "CALC_BYTE"
-          },
-          {
-            "type": "register",
-            "value": "KEY_VAL"
-          },
-          {
-            "type": "register",
-            "value": "TEMP"
-          },
-          {
-            "type": "constant",
-            "value": "-256"
-          },
-          {
-            "type": "register",
-            "value": "ADR_I"
-          },
-          {
-            "type": "constant",
-            "value": "65"
-          }
-        ],
-        "muxType": "A"
-      },
-      {
-        "input": [
-          {
-            "type": "register",
-            "value": "PC"
-          },
-          {
-            "type": "register",
-            "value": "IR"
-          },
-          {
-            "type": "register",
-            "value": "MDR"
-          },
-          {
-            "type": "register",
-            "value": "ACCU"
-          },
-          {
-            "type": "register",
-            "value": "ITER"
-          },
-          {
-            "type": "register",
-            "value": "CALC_ADR"
-          },
-          {
-            "type": "register",
-            "value": "CALC_BYTE"
-          },
-          {
-            "type": "constant",
-            "value": "4"
-          },
-          {
-            "type": "register",
-            "value": "KEY_VAL"
-          },
-          {
-            "type": "constant",
-            "value": "256"
-          },
-          {
-            "type": "register",
-            "value": "RDM_ADR"
-          },
-          {
-            "type": "register",
-            "value": "RDM_BYTE"
-          },
-          {
-            "type": "register",
-            "value": "SHIFT"
-          },
-          {
-            "type": "register",
-            "value": "SHIFT2"
-          },
-          {
-            "type": "register",
-            "value": "ERASED"
-          },
-          {
-            "type": "register",
-            "value": "TEMP"
-          },
-          {
-            "type": "register",
-            "value": "BYTE_I"
-          },
-          {
-            "type": "register",
-            "value": "ERASED2"
-          }
-        ],
-        "muxType": "B"
-      }
-    ],
-    "registers": {
-      "register": [
+{"machine": {
+  "muxInputs": [
+    {
+      "input": [
         {
-          "size": "BITS_32",
-          "name": "ITER",
-          "description": "Index i in permutation loop"
+          "type": "constant",
+          "value": "0"
         },
         {
-          "size": "BITS_32",
-          "name": "CALC_ADR",
-          "description": "Result of the division of ITER by 4"
+          "type": "constant",
+          "value": "1"
         },
         {
-          "size": "BITS_32",
-          "name": "CALC_BYTE",
-          "description": "Result of ITER modulo 4"
+          "type": "register",
+          "value": "ACCU"
         },
         {
-          "size": "BITS_32",
-          "name": "KEY_VAL",
-          "description": "key[i mod key.length]"
+          "type": "register",
+          "value": "j"
         },
         {
-          "size": "BITS_32",
-          "name": "TEMP",
-          "description": "vorläufiger Wert"
+          "type": "register",
+          "value": "i"
         },
         {
-          "size": "BITS_32",
-          "name": "RDM_ADR",
-          "description": "Random adress created from j"
+          "type": "constant",
+          "value": "255"
         },
         {
-          "size": "BITS_32",
-          "name": "RDM_BYTE",
-          "description": "Random byte created from j"
+          "type": "register",
+          "value": "MDR"
         },
         {
-          "size": "BITS_32",
-          "name": "SHIFT",
-          "description": "number of places to shift, either left or right"
+          "type": "constant",
+          "value": "8"
         },
         {
-          "size": "BITS_32",
-          "name": "SHIFT2",
-          "description": "Saves the number of places the shift muss execute."
+          "type": "register",
+          "value": "i_value"
         },
         {
-          "size": "BITS_32",
-          "name": "ERASED",
-          "description": "Word with an erased byte"
+          "type": "register",
+          "value": "tmp"
         },
         {
-          "size": "BITS_32",
-          "name": "ADR_I",
-          "description": "Address  von S[i]"
+          "type": "register",
+          "value": "key_value"
         },
         {
-          "size": "BITS_32",
-          "name": "BYTE_I",
-          "description": "Byte in address von S[i] "
+          "type": "register",
+          "value": "j_volue"
         },
         {
-          "size": "BITS_32",
-          "name": "ERASED2",
-          "description": "Word with an erased byte"
+          "type": "constant",
+          "value": "-256"
+        },
+        {
+          "type": "constant",
+          "value": "64"
         }
-      ]
+      ],
+      "muxType": "A"
     },
-    "alu": {
-      "operation": [
-        "A_ADD_B",
-        "A_SUB_B",
-        "B_SUB_A",
-        "TRANS_A",
-        "TRANS_B",
-        "A_DIV_B",
-        "A_MOD_B",
-        "A_MUL_B",
-        "A_SL_B",
-        "A_SR_B",
-        "A_AND_B",
-        "A_OR_B",
-        "A_ROTL_B"
-      ]
+    {
+      "input": [
+        {
+          "type": "register",
+          "value": "MDR"
+        },
+        {
+          "type": "register",
+          "value": "PC"
+        },
+        {
+          "type": "register",
+          "value": "IR"
+        },
+        {
+          "type": "register",
+          "value": "ACCU"
+        },
+        {
+          "type": "constant",
+          "value": "8"
+        },
+        {
+          "type": "constant",
+          "value": "4"
+        },
+        {
+          "type": "register",
+          "value": "i_adr"
+        },
+        {
+          "type": "register",
+          "value": "i_byte"
+        },
+        {
+          "type": "register",
+          "value": "i_shift"
+        },
+        {
+          "type": "register",
+          "value": "i_mask"
+        },
+        {
+          "type": "register",
+          "value": "i_value"
+        },
+        {
+          "type": "register",
+          "value": "key_adr"
+        },
+        {
+          "type": "register",
+          "value": "key_byte"
+        },
+        {
+          "type": "register",
+          "value": "key_shift"
+        },
+        {
+          "type": "register",
+          "value": "key_mask"
+        },
+        {
+          "type": "constant",
+          "value": "256"
+        },
+        {
+          "type": "register",
+          "value": "j"
+        },
+        {
+          "type": "register",
+          "value": "j_odr"
+        },
+        {
+          "type": "register",
+          "value": "j_byte"
+        },
+        {
+          "type": "register",
+          "value": "j_shift"
+        },
+        {
+          "type": "register",
+          "value": "j_mosk"
+        },
+        {
+          "type": "register",
+          "value": "i"
+        }
+      ],
+      "muxType": "B"
     }
-  }
-}
+  ],
+  "registers": {"register": [
+    {
+      "size": "BITS_32",
+      "name": "j",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "i",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "i_adr",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "i_byte",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "i_shift",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "i_mask",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "i_value",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "tmp",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "key_adr",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "key_byte",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "key_shift",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "key_mask",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "key_value",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "j_odr",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "j_byte",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "j_shift",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "j_mosk",
+      "description": ""
+    },
+    {
+      "size": "BITS_32",
+      "name": "j_volue",
+      "description": ""
+    }
+  ]},
+  "alu": {"operation": [
+    "A_ADD_B",
+    "B_SUB_A",
+    "TRANS_A",
+    "TRANS_B",
+    "A_MOD_B",
+    "A_DIV_B",
+    "A_MUL_B",
+    "A_SR_B",
+    "A_SL_B",
+    "A_ROTL_B",
+    "A_ROTR_B",
+    "A_XOR_B",
+    "A_AND_B"
+  ]}
+}}
