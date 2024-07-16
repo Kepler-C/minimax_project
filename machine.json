@@ -94,6 +94,10 @@
           {
             "type": "constant",
             "value": "13040"
+          },
+          {
+            "type": "register",
+            "value": "z_value"
           }
         ],
         "muxType": "A"
@@ -253,8 +257,8 @@
             "value": "rot_mask"
           },
           {
-            "type": "constant",
-            "value": "13039"
+            "type": "register",
+            "value": "j_temp"
           }
         ],
         "muxType": "B"

@@ -909,204 +909,6 @@
             "value": "0"
           },
           {
-            "name": "ITER.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ],
-        "label": "PRGA",
-        "unconditional-jump": {
-          "target": "49"
-        }
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "3"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MAR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ],
-        "label": "loop2"
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ACCU.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "13"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "4"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "MAR.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "0"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "1"
-          },
-          {
-            "name": "MDR.W",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "5"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "TEMP.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "3"
-          }
-        ]
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "6"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "15"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ACCU.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "1"
-          }
-        ],
-        "conditional-jump": {
-          "cond0-target": "47",
-          "cond1-target": "48"
-        }
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "1"
-          },
-          {
-            "name": "ALU_SELECT_B",
-            "value": "4"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
-            "name": "ITER.W",
-            "value": "1"
-          },
-          {
-            "name": "ALU_CTRL",
-            "value": "0"
-          }
-        ],
-        "label": "INC",
-        "unconditional-jump": {
-          "target": "40"
-        }
-      },
-      {
-        "signal": [
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          }
-        ],
-        "label": "RESULT"
-      },
-      {
-        "signal": [
-          {
-            "name": "ALU_SELECT_A",
-            "value": "0"
-          },
-          {
-            "name": "MEM_CS",
-            "value": "0"
-          },
-          {
             "name": "i.W",
             "value": "1"
           },
@@ -1724,8 +1526,13 @@
           {
             "name": "MEM_CS",
             "value": "1"
+          },
+          {
+            "name": "MDR.W",
+            "value": "1"
           }
-        ]
+        ],
+        "comment": "S[j] <- S[i]"
       },
       {
         "signal": [
@@ -1862,7 +1669,8 @@
             "value": "1"
           }
         ],
-        "label": "PRGA_SWAP_END"
+        "label": "PRGA_SWAP_END",
+        "comment": "S[i] <- S[j]"
       },
       {
         "signal": [
@@ -2123,10 +1931,6 @@
       {
         "signal": [
           {
-            "name": "ALU_SELECT_A",
-            "value": "13"
-          },
-          {
             "name": "ALU_SELECT_B",
             "value": "36"
           },
@@ -2140,7 +1944,7 @@
           },
           {
             "name": "ALU_CTRL",
-            "value": "0"
+            "value": "4"
           }
         ]
       },
@@ -2165,6 +1969,30 @@
           {
             "name": "ALU_CTRL",
             "value": "5"
+          }
+        ]
+      },
+      {
+        "signal": [
+          {
+            "name": "ALU_SELECT_A",
+            "value": "13"
+          },
+          {
+            "name": "ALU_SELECT_B",
+            "value": "30"
+          },
+          {
+            "name": "MEM_CS",
+            "value": "0"
+          },
+          {
+            "name": "z_adr.W",
+            "value": "1"
+          },
+          {
+            "name": "ALU_CTRL",
+            "value": "0"
           }
         ]
       },
@@ -2308,7 +2136,7 @@
         "signal": [
           {
             "name": "ALU_SELECT_A",
-            "value": "22"
+            "value": "23"
           },
           {
             "name": "ALU_SELECT_B",
@@ -2326,13 +2154,14 @@
             "name": "ALU_CTRL",
             "value": "9"
           }
-        ]
+        ],
+        "comment": "z[x]"
       },
       {
         "signal": [
           {
             "name": "ALU_SELECT_A",
-            "value": "22"
+            "value": "23"
           },
           {
             "name": "ALU_SELECT_B",
@@ -2356,7 +2185,7 @@
         "signal": [
           {
             "name": "ALU_SELECT_A",
-            "value": "22"
+            "value": "23"
           },
           {
             "name": "ALU_SELECT_B",
@@ -2428,7 +2257,7 @@
         "signal": [
           {
             "name": "ALU_SELECT_A",
-            "value": "22"
+            "value": "23"
           },
           {
             "name": "ALU_SELECT_B",
@@ -2500,8 +2329,8 @@
           }
         ],
         "conditional-jump": {
-          "cond0-target": "50",
-          "cond1-target": "113"
+          "cond0-target": "40",
+          "cond1-target": "104"
         }
       },
       {
