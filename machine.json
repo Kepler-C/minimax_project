@@ -92,6 +92,10 @@
             "value": "x_offset"
           },
           {
+            "type": "constant",
+            "value": "13040"
+          },
+          {
             "type": "register",
             "value": "z_value"
           }
@@ -247,6 +251,14 @@
           {
             "type": "register",
             "value": "x"
+          },
+          {
+            "type": "register",
+            "value": "rot_mask"
+          },
+          {
+            "type": "register",
+            "value": "j_temp"
           }
         ],
         "muxType": "B"
@@ -448,6 +460,16 @@
           "size": "BITS_32",
           "name": "z_byte2",
           "description": ""
+        },
+        {
+          "size": "BITS_32",
+          "name": "j_temp",
+          "description": "saves old S[j] value for swapping on the RPGA"
+        },
+        {
+          "size": "BITS_32",
+          "name": "rot_mask",
+          "description": "Mask used for rotation bits in PRGA swap"
         }
       ]
     },
@@ -466,7 +488,8 @@
         "A_AND_B",
         "A_OR_B",
         "A_ROTL_B",
-        "A_INC"
+        "A_INC",
+        "A_XOR_B"
       ]
     }
   }
